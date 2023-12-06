@@ -5,6 +5,7 @@
  * Affil.: TUM SVP            *
  ******************************/
 
+//const GEOSERVER_URL= "https://us-central1-justfairmobility.cloudfunctions.net/proxyToInsecureEndpoint"
 const GEOSERVER_URL = "http://91.200.101.244:3000/geoserver/wfs";
 // const GEOSERVER_URL = 'http://localhost:3000/geoserver/wfs';
 
