@@ -66,12 +66,14 @@ function changeMap() {
     //Connect to Geoserver WFS
     if (selected_values["map_type"] == "diff_sg") {
         callGeoServer(
+            0,
             "divergent",
             { "filter1": selected_values["v1"], "filter2": selected_values["mot"] },
             handleJsonDiv
         );
     } else if (selected_values["map_type"] == "summ") {
         callGeoServer(
+            1,
             "all_normalized",
             {},
             handleJsonRadar
@@ -81,12 +83,14 @@ function changeMap() {
             case "acc":
                 if (selected_values["map_type"] == "ji") {
                     callGeoServer(
+                        2,
                         "acc_all",
                         { "user": selected_values["v1"], "amenity": selected_values["amenity"], "mot": selected_values["mot"] },
                         handleJsonSeq
                     );
                 } else {
                     callGeoServer(
+                        3,
                         "acc_hilo",
                         { "user": selected_values["v1"], "amenity": selected_values["amenity"], "mot": selected_values["mot"] },
                         handleJsonBiv
@@ -94,12 +98,14 @@ function changeMap() {
                 }
 
                 callGeoServer(
+                    4,
                     "pois",
                     { "amenity": selected_values["amenity"] },
                     handleJsonPOIs
                 );
 
                 callGeoServer(
+                    5,
                     "service_areas",
                     { "amenity": selected_values["amenity"], "mot": selected_values["mot"] },
                     handleJsonAreas
@@ -110,12 +116,14 @@ function changeMap() {
             case "exp":
                 if (selected_values["map_type"] == "ji") {
                     callGeoServer(
+                        6,
                         "exposure",
                         { "type": selected_values["v1"] },
                         handleJsonSeq
                     );
                 } else {
                     callGeoServer(
+                        7,
                         "exposure_hilo",
                         { "user": selected_values["v1"], "type": selected_values["amenity"] },
                         handleJsonBiv
@@ -125,12 +133,14 @@ function changeMap() {
             case "ava":
                 if (selected_values["map_type"] == "ji") {
                     callGeoServer(
+                        8,
                         "availability",
                         { "type": selected_values["v1"] },
                         handleJsonSeq
                     );
                 } else {
                     callGeoServer(
+                        9,
                         "availability_hilo",
                         { "user": selected_values["v1"], "type": selected_values["amenity"] },
                         handleJsonBiv
@@ -140,12 +150,14 @@ function changeMap() {
             case "beh":
                 if (selected_values["map_type"] == "ji") {
                     callGeoServer(
+                        10,
                         "behaviour",
                         { "type": selected_values["v1"] },
                         handleJsonSeq
                     );
                 } else {
                     callGeoServer(
+                        11,
                         "behaviour_hilo",
                         { "user": selected_values["v1"], "type": selected_values["amenity"] },
                         handleJsonBiv
@@ -155,12 +167,14 @@ function changeMap() {
             case "income":
                 if (selected_values["map_type"] == "sg") {
                     callGeoServer(
+                        12,
                         "income",
                         {},
                         handleJsonSeq
                     );
                 } else {
                     callGeoServer(
+                        13,
                         "income_hilo",
                         {},
                         handleJsonBiv
@@ -176,6 +190,7 @@ function changeMap() {
             case "sp":
                 if (selected_values["map_type"] == "sg") {
                     callGeoServer(
+                        14,
                         "population",
                         //{ "user": selected_values["v1"] },
                         { "user": selected_values["justice"] },

@@ -25,7 +25,7 @@ function formatDictionary(dict) {
  * @param {string|function} callback Callback function to be called with the AJAX call data
  * @returns {any} The AJAX call
  */
-function callGeoServer(tablename, params, callback){
+function callGeoServer(id, tablename, params, callback){
     var cleanCallback;
     switch(typeof(callback)) {
         case 'string':
