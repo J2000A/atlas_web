@@ -43,7 +43,10 @@ function changeMap() {
         "v1": getValue("v1"),
         "amenity": getValue("amenity"),
         "mot": getValue("mot")
+
     }
+
+    console.log(selected_values)
 
     info.update();
 
@@ -154,6 +157,11 @@ function changeMap() {
                         "behaviour",
                         { "type": selected_values["v1"] },
                         handleJsonSeq
+                    );
+                    // add element to map that is the geojson locally
+                    callLocalGeoRepo(
+                        'geodata/filtered_stops.geojson', 
+                        handleBusstopPOIs
                     );
                 } else {
                     callGeoServer(
