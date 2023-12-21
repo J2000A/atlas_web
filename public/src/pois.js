@@ -76,6 +76,18 @@ function handleBusstopPOIs(data) {
             return L.circle(latlng, { radius: 300, interactive: false });
         }
     }).addTo(map);
+    /* 
+    console.log(data.features)
+    var data_features = data.features;
+    var buffers = data_features.map(function(point) {
+        return turf.buffer(point, 500, {units: 'meters'});
+    });
+    console.log(buffers)
+    var unionBuffer = turf.union(...buffers);
+
+    areaLayer = L.geoJson(unionBuffer, {
+        style: style,
+    }).addTo(map); */
 
     var legend_text = '<h4><span i18n="' + selected_values["amenity"] + '"></span> Points of Interest (POIs)</h4>';
     legend_text += getLegendIFromCircleStyle(poiCircleStyle);
