@@ -109,7 +109,7 @@ function handleJsonBiv(data) {
     if (selected_values["justice"] == "acc") {
         if (poiLayer) { layerControlOptions["POIs"] = poiLayer; }
         if (areaLayer) { layerControlOptions["Service Areas"] = areaLayer; }
-    } else if (selected_values["justice"] == "beh") {
+    } else if (selected_values["justice"] == "beh") { // TODO that these elements also show up in the layerControl
         if (poiLayer) { layerControlOptions["POIs"] = poiLayer; }
     }
     layerControl = L.control.layers(null, layerControlOptions).addTo(map);
