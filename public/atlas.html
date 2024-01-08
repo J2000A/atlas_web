@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<base target="_top">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title id="title", i18n="title"></title>
+	
+	<link rel="shortcut icon" type="image/x-icon" href="https://www.tum.de/typo3conf/ext/in2template/Resources/Public/Images/Icons/favicons/favicon.ico" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.js"></script>
+
+	<!-- i18n -->
+	<script src="https://cdn.jsdelivr.net/npm/i18next@22.4.10/i18next.min.js" integrity="sha256-HhbcQm9uCk1XKzYb8wgO1aAW+Wcdh14ITlBggCy7lDk=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/i18next-http-backend@2.1.1/i18nextHttpBackend.min.js" integrity="sha256-PEd69ii7lMPlO/bO8tpxaVjLXXkD+r9aejg8nFAcue4=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/i18next-browser-languagedetector@7.0.1/i18nextBrowserLanguageDetector.min.js" integrity="sha256-5O8laLCvkg/QnkOa0yIzvZ7RcJgT4nSG6/gdbudcTGg=" crossorigin="anonymous"></script>
+
+	<!-- Social buttons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<link rel="stylesheet" href="atlas.css" />
+</head>
+<body>
+
+<nav class="navbar">
+	<div class="navbar-container">
+		<input type="checkbox" id="navbar-left">
+		<div class="hamburger-lines">
+			<span class="line line1"></span>
+			<span class="line line2"></span>
+			<span class="line line3"></span>
+		</div>
+		<div class="menu-items">
+			<div class="select-main" id="sp-0">
+				<input type="checkbox" checked>
+				<div class="select-title-text" i18n="select_map_type"></div>
+				<div class="arrow"></div>
+				<div class="select-options" id="map_type">
+					<div class="select-option">
+						<input type="radio" name="map_type" id="sg" value="sg">
+						<label for="sg" i18n="sg"></label>
+						<div class="select-title-info">
+							&#x1F6C8;
+							<span class="info-tooltip" i18n="desc_sg"></span>
+						</div>
+					</div>
+					<div class="select-option">
+						<input type="radio" name="map_type" id="ji" value="ji">
+						<label for="ji" i18n="ji"></label>
+						<div class="select-title-info">
+							&#x1F6C8;
+							<span class="info-tooltip" i18n="desc_ji"></span>
+						</div>
+					</div>
+					<div class="select-option">
+						<input type="radio" name="map_type" id="ji_v_sg" value="ji_v_sg">
+						<label for="ji_v_sg" i18n="ji_v_sg"></label>
+						<div class="select-title-info">
+							&#x1F6C8;
+							<span class="info-tooltip" i18n="desc_ji_v_sg"></span>
+						</div>
+					</div>
+					<!--<div class="select-option">
+						<input type="radio" name="map_type" id="diff_sg" value="diff_sg">
+						<label for="diff_sg" i18n="diff_sg"></label>
+						<div class="select-title-info">
+							&#x1F6C8;
+							<span class="info-tooltip" i18n="desc_diff_sg"></span>
+						</div>
+					</div>-->
+					<div class="select-option">
+						<input type="radio" name="map_type" id="summ" value="summ">
+						<label for="summ" i18n="summ"></label>
+						<div class="select-title-info">
+							&#x1F6C8;
+							<span class="info-tooltip" i18n="desc_summ"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="select-main" id="sp-1" style="display: none;">
+				<input type="checkbox">
+				<div class="select-title-text" i18n="select"></div>
+				<div class="arrow"></div>
+				<div class="select-options" id="justice">
+				</div>
+			</div>
+			<div class="select-main" id="sp-3" style="display: none;">
+				<input type="checkbox">
+				<div class="select-title-text" i18n="select"></div>
+				<div class="arrow"></div>
+				<div class="select-options" id="amenity">
+				</div>
+			</div>
+			<div class="select-main" id="sp-4" style="display: none;">
+				<input type="checkbox">
+				<div class="select-title-text" i18n="select"></div>
+				<div class="arrow"></div>
+				<div class="select-options" id="mot">
+				</div>
+			</div>
+			<div class="select-main" id="sp-2" style="display: none;">
+				<input type="checkbox">
+				<div class="select-title-text" i18n="select"></div>
+				<div class="arrow"></div>
+				<div class="select-options" id="v1">
+				</div>
+			</div>
+		</div>
+		<div class="navbar-top-elements">
+			<div style="display: flex; align-items: center;">
+				<a style="margin-right: 20px" class="logo" title="Technische Universität München" href="https://www.mos.ed.tum.de/sv/startseite/">
+					<svg width="80" height="42" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 73 38">
+						<path d="M28 0v31h8V0h37v38h-7V7h-8v31h-7V7h-8v31H21V7h-7v31H7V7H0V0h28z" fill="currentColor"></path>
+					</svg>
+					<span class="visually-hidden">TUM</span>
+					<!-- <span class="desktop-show" i18n="header"></span> -->
+				</a>
+				<img style="height: 42px; margin-right: 20px" src="img/mcube-logo.svg" alt="MCube Cluster">
+				<img style="height: 42px;" src="img/jfm_logo.png" alt="JustFairMobility">
+			</div>
+			<div class="title"><h1 i18n="title"></h1></div>
+		</div>
+	</div>
+</nav>
+
+<section class="map-area" id="map-area">
+	<div id="map"></div>
+</section>
+
+<div id="modal-about" class="modal">
+	<div class="modal-content">
+		<span class="close">&times;</span>
+		<div class="modal-text">
+		</div>
+	</div>
+</div>
+
+<footer>
+	<a href="#" id="download" i18n="download"></a>
+	<a href="#" id="share" i18n="share"></a>
+	<a href="#" id="about_us" i18n="about_us"></a>
+	<select data-i18n-switcher class="locale-switcher">
+		<option value="en">English</option>
+		<option value="de">Deutsch</option>
+		<option value="es">Español</option>
+	</select>
+</footer>
+
+<script src="src/i18n.js"></script>
+<script src="src/utils.js"></script>
+<script src="src/geoserver.js"></script>
+<script src="src/geolocal.js"></script>
+<script src="src/radar.js"></script>
+<script src="src/legend.js"></script>
+<script src="src/map.js"></script>
+<script src="src/cats.js"></script>
+<script src="src/interactivity.js"></script>
+<script src="src/sequential.js"></script>
+<script src="src/bivariate.js"></script>
+<script src="src/divergent.js"></script>
+<script src="src/pois.js"></script>
+<script src="src/areas.js"></script>
+<script src="src/modal.js"></script>
+<script src="src/url.js"></script>
+</body>
+</html>
