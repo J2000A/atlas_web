@@ -84,6 +84,12 @@ body {
 /****************
  * BEGIN NAVBAR *
  ****************/
+
+.home_header {
+    background: var(--tum-blue-dark);
+    color: white;
+}
+
 .navbar {
     box-shadow: 0px 5px 10px 0px #aaa;
     position: fixed;
@@ -353,6 +359,7 @@ div.select-title-info:hover>span.info-tooltip {
     -webkit-padding-before: 1.25rem;
     padding-block-start: 1.25rem;
     text-decoration: none !important;
+    color: white;
 }
 
 .logo span.visually-hidden {

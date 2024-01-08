@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="home_header">
+        <div class="navbar-container">
+            <div class="navbar-top-elements">
+                <div style="display: flex; align-items: center;">
+                    <a style="margin-right: 20px;" class="logo" title="Technische Universität München" href="https://www.mos.ed.tum.de/sv/startseite/">
+                        <svg width="80" height="42" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 73 38">
+                            <path d="M28 0v31h8V0h37v38h-7V7h-8v31h-7V7h-8v31H21V7h-7v31H7V7H0V0h28z" fill="white"></path>
+                        </svg>
+                        <span class="visually-hidden">TUM</span>
+                        <!-- <span class="desktop-show" i18n="header"></span> -->
+                    </a>
+                    <img style="height: 42px; margin-right: 20px" src="img/mcube-logo.svg" alt="MCube Cluster">
+                    <img style="height: 42px;" src="img/jfm_logo.png" alt="JustFairMobility">
+                </div>
+                <div class="title"><h1 i18n="title"></h1></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main">
+        <div id="left-column">
+            <h2>Left Column Header</h2>
+            <p>Left Column Paragraph</p>
+        </div>
+
+        <div id="main-column">
+
+            <div class="text-box">
+                <h3>Goal</h3>
+                <p>Wo gibt es Mobilitätsungerechtigkeiten in München? Wie können wir diese sichtbar machen? Was sind kritische Bereiche?</p>
+                <p>Der Mobility (In)Justice Atlas soll politische Entscheidungsträger, PlanerInnen und die breite Öffentlichkeit dabei unterstützen, die <b>Mobilitätsungerechtigkeit in München</b> zu identifizieren und zu visualisieren. Gezeigt werden Stadtteile, die in denen ein hoher Anteil benachteiligter Gruppen lebt und parallel weniger Mobilitätsressourcen oder starke Verkehrsbelastungen vorhanden sind. Aufgrund der vielen möglichen Szenarien zeigt dieser Atlas Beispiele für die untersuchten benachteiligten Gruppen und negativen externen Effekte auf. Basierend darauf können Entscheidungen <b>für zukünftige Mobilitätsprojekte</b> getroffen werden.</p>
+            </div>
+
+            <div class="text-box">
+                <h3>Definitions</h3>
+                <p>Aus soziodemografischer und wirtschaftlicher Sicht wird sich auf die Analyse von sechs gesellschaftlichen Hauptgruppen konzentriert, die als benachteiligt definiert sind: Ältere Bevölkerung, jüngere Bevölkerung, ausländische Bevölkerung, Arbeitslose, Alleinerziehende und Geringverdienende.
+                    Dieser Atlas konzentriert sich auf zwei Arten von Gerechtigkeit:
+                    Verteilungsgerechtigkeit: Beurteilt wird anhand der Verfügbarkeit von Verkehrsmitteln und -infrastrukturen (z. B. Car-Sharing Mitgliedschaft), Fahrradbesitz und Radinfrastruktur (Radwege), der Nähe zuöffentlichen Verkehrsmitteln, Anzahl von Kreuzungen (Fußgängerfreundlichkeit) und Erreichbarkeit von Daseinsvorsorgeeinrichtungen (Points of Interest).
+                    Umweltgerechtigkeit: Indikatoren der Analyse sind drei negative Auswirkungen
+                    des Verkehrs auf die Bevölkerung – Verkehrsunfälle, Lärmbelastung und Luftverschmutzung. 
+                    Mobilitätsungerechtigkeit definiert folglich die Nichtverfügbarkeit von Umwelt- und Verteilungsgerechtigkeit, unter der besonders die oben stehenden sechs Gruppen leiden.</p>
+            </div>
+
+            <div class="text-box with-button">
+                <h3>New Functionality & Roadmap</h3>
+                <p>Uns ist die Beteiligung der gesamten Bevölkerung Münchens extrem wichtig. Aufgrund haben wir eine erste Vision der JustFairMobility-App entwickelt, die Sie gerne nutzen dürfen. In dieser kann neben der Meldung aktueller Probleme an Umfragen teilgenommen werden, um die Mobilitätsungerechtigkeit weiter zu reduzieren.
+                    Auch diese Online-Version wird weiter optimiert: Neben weiteren Datenquellen werden wir in Zukunft die verschiedenen Points of Interest detaillierter darstellen, eine Version für VerkehrsplanerInnnen sowie eine Auswahl zwischen Tag und Nacht implementieren.</p>
+                <a href="index.html" class="button">Go to Index</a> <!-- change positioning that it looks better -->
+            </div>
+        </div>
+    
+        <div id="right-column">
+            <h2>Right Column Header</h2>
+            <p>Right Column Paragraph</p>
+        </div>
+    </div>
+
+<script src="src/i18n.js"></script>  <!--TODO how do we get this translation running?-->
+</body>
+
+</html>
