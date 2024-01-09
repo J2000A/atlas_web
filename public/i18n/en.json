@@ -4,6 +4,7 @@
     "header": "Chair of Urban Structure and Transport Planning\nTUM School of Engineering and Design\nTechnical University of Munich",
     "hover": "Hover over a neighborhood",
     "click": "Click on a neighborhood",
+    "feedback_click": "Click on a marker",
     "update": "Update map",
     "download": "📥 Download data (GeoJSON)",
     "about_us": "About",
@@ -34,6 +35,8 @@
     "desc_ji_v_sg": "Where do social disadvantages cross transport disadvantages?",
     "diff_sg": "Advantaged vs. disadvantaged groups",
     "desc_diff_sg": "How big is the gap between advantaged and disadvantaged groups?",
+    "feedback": "Citizen Feedback",
+    "desc_feedback": "Citizen feedback collected with the JustFairMobility app",
     "summ": "Neighbourhoods summary",
     "desc_summ": "How just is mobility in my neighborhood?",
 

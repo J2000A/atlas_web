@@ -4,6 +4,7 @@
     "header": "Lehrstuhl für Siedlungsstruktur und Verkehrsplanung\nTUM School of Engineering and Design\nTechnische Universität München",
     "hover": "Bewegen Sie den Mauszeiger über die verschiedenen Bezirksteile",
     "click": "Klicken Sie auf eine Bezirksteile",
+    "feedback_click": "Klicken Sie auf einen Marker",
     "update": "zur Karte",
     "download": "📥 Daten herunterladen (GeoJSON)",
     "about_us": "Über",
@@ -34,6 +35,8 @@
     "desc_ji_v_sg": "Wo überlagern sich soziale Nachteile und Verkehrsnachteilen?",
     "diff_sg": "Begünstigte vs. benachteiligte Gruppen",
     "desc_diff_sg": "Wie groß ist die Kluft zwischen begünstigten und benachteiligten Gruppen?",
+    "feedback": "Bürger Feedback",
+    "desc_feedback": "Bürger Feedback gesammelt durch die JustFairMobility App",
     "summ": "Zusammenfassung der Bezirksteile",
     "desc_summ": "Wie gerecht ist die Mobilität in meinem Bezirksteil?",
 

@@ -81,6 +81,10 @@ function changeMap() {
             {},
             handleJsonRadar
         );
+    } else if (selected_values["map_type"] == "feedback") {
+        callFeedback(
+            handleFeedback
+        );
     } else {
         switch (selected_values["justice"]) {
             case "acc":

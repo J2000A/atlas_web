@@ -50,6 +50,8 @@ info.update = function (props) {
 
     if (selected_values["map_type"] == "summ") {
         this._div.innerHTML = '<h4><span i18n="click"></span></h4>';
+    } else if (selected_values["map_type"] == "feedback") {
+        this._div.innerHTML = '<h4><span i18n="feedback_click"></span></h4>';
     } else {
         this._div.innerHTML = '<h4><span i18n="hover"></span></h4>';
     }

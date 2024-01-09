@@ -72,6 +72,10 @@ var selector_values_before_sp_0 = [
         "desc": "desc_diff_sg"
     },*/
     {
+        "value": "feedback",
+        "desc": "desc_feedback"
+    },
+    {
         "value": "summ",
         "desc": "desc_summ"
     }
@@ -803,6 +807,8 @@ function correctValues(values) {
         // If value dict not passed, use selectors
         if (getValue("map_type") == "summ") return true;
 
+        if (getValue("map_type") == "feedback") return true;
+
         if (getValue("justice") == undefined) return false;
         
         return ((!isDisabled("v1") && getValue("v1") != undefined) || isDisabled("v1"))
@@ -811,6 +817,8 @@ function correctValues(values) {
     } else {
         // Otherwise check in values dict
         if (values["map_type"] == "summ") return true;
+
+        if (values["map_type"] == "feedback") return true;
 
         if (values["justice"] == undefined) return false;
 
