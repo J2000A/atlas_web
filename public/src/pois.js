@@ -82,7 +82,7 @@ function handleFeedback(data) {
             if (feature.properties.photos && feature.properties.photos.length > 0) {
                 popupContent += "<br><strong>Photos:</strong><br>";
                 feature.properties.photos.forEach(photo => {
-                    let path = "img/feedback/" + photo
+                    let path = "https://firebasestorage.googleapis.com/v0/b/justfairmobility.appspot.com/o/" + photo + "?alt=media"
                     popupContent += `<a href="${path}" target="_blank"><img src="${path}" width="100"></a><br>`;
                 });
             }
