@@ -46,15 +46,15 @@ function handleJsonBiv(data) {
         let v2_critical = getCritical(biv_quart_X);
         if (v1 == v1_critical) {
             if (v2 == v2_critical) {
-                return '#574249';
+                return '#ff0000';
             } else {
-                return '#c85a5a';
+                return '#64ACBE';
             }
         } else {
             if (v2 == v2_critical) {
-                return '#64acbe';
+                return '#B3B4BA';
             } else {
-                return '#e8e8e8';
+                return '#008000';
             }
         }
     }
