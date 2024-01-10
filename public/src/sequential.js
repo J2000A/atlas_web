@@ -8,6 +8,9 @@
 function handleJsonSeq(data) {
     biv = false;
 
+    console.log(data)
+    // TODO wenn die bedingung hierfür sg + income oder sg + tp (total population) ist, dann müssen wir die funktion getColor quasi einfach umdrehen weil es andersrum positiv ist - wie übergebe ich da einen einfachen boolean ob man das umdreht, kenne mich da leider nicht gut genug mit JS aus
+
     // Add data to download button
     var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(data));
     download.setAttribute("href", dataStr);

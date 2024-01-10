@@ -178,6 +178,7 @@ function changeMap() {
                 break;
             case "income":
                 if (selected_values["map_type"] == "sg") {
+                    // TODO change the order of the coloring for both income and total population, ideally population density
                     callGeoServer(
                         12,
                         "income",
