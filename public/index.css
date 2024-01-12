@@ -62,19 +62,31 @@ body {
 .with-button {
     position: relative;
     height: 30px;
-    text-align: center; /* Added to center the button horizontally */
+    text-align: center;
 }
 
 .button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #4caf50;
-    color: #fff;
-    text-decoration: none;
+    background-color: #072140;
+    -webkit-text-fill-color: #ffffff;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 10px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+a {
+    color: black;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: darkgrey;
+}
+
+a:visited {
+    color: black;
 }
