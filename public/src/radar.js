@@ -155,7 +155,7 @@ function handleJsonRadar(data) {
     polygonLayer.resetStyle();
 
     // Zoom to the selected neighbourhood
-    zoomToFeature(e);
+    //zoomToFeature(e);
 
     // Set style of the selected neighborhood
     var layer = e.target;
