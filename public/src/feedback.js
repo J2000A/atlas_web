@@ -1,6 +1,6 @@
 function callFeedback(callback) {
     // Fetch all documents from the "feedback" collection
-    fetch(`https://firestore.googleapis.com/v1/projects/justfairmobility/databases/(default)/documents/feedback`, {
+    fetch(`https://firestore.googleapis.com/v1/projects/justfairmobility/databases/(default)/documents/feedback?pageSize=10000`, {
         method: 'GET',
     })
         .then(response => {
