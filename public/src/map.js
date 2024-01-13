@@ -28,6 +28,7 @@ const mot = document.querySelector('#mot');
 // Map layers
 var polygonLayer;
 var poiLayer;
+var feedbackLayer;
 var areaLayer;
 var layerControl;
 var biv;
@@ -62,6 +63,9 @@ function changeMap() {
         if (layerControl) {
             layerControl.remove();
         }
+    }
+    if (feedbackLayer) {
+        feedbackLayer.remove();
     }
 
     generateLegend("", true);

@@ -67,7 +67,7 @@ function handleFeedback(data) {
     };
 
     // Use the generated GeoJSON object to create POI markers on the map
-    poiLayer = L.geoJson(poiGeoJSON, {
+    feedbackLayer = L.geoJson(poiGeoJSON, {
         attribution: '&copy; <a href="https://www.mos.ed.tum.de/sv/homepage/" i18n="chair"></a>',
         pointToLayer: function (feature, latlng) {
             return L.circleMarker(latlng, poiFeedbackStyle);
