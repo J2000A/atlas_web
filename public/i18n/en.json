@@ -153,7 +153,7 @@
 
     "index_right_title": "Data in this Atlas",
     "index_right_text1": "The Atlas accesses a variety of data sources to ensure optimal data quality. These include:",
-    "index_right_table1": "OpenStreetMap for road, cycling, and public transportation networks as well as Points of Interest (POIs)",
+    "index_right_table1": "OpenStreetMap for road, cycling, and pubgtclic transportation networks as well as Points of Interest (POIs)",
     "index_right_table2": "National Mobility Report",
     "index_right_table3": "National Accident Atlas for traffic accidents",
     "index_right_table4": "Bavarian Environmental Atlas for noise data",
@@ -162,6 +162,6 @@
     "index_right_table6_2": "Census data of the city of Munich for socio-demographic data",
 
     "privacy": "Privacy",
-    "gtc": "GTC"
+    "terms": "Terms"
     
 }
