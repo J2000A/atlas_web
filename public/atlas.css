@@ -658,3 +658,16 @@ footer {
     text-decoration: none;
     cursor: pointer;
 }
+
+a {
+    color: black;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: darkgrey;
+}
+
+a:visited {
+    color: black;
+}

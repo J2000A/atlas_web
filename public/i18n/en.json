@@ -159,6 +159,9 @@
     "index_right_table4": "Bavarian Environmental Atlas for noise data",
     "index_right_table5": "Traffic simulation from the Technical University of Munich for emissions",
     "index_right_table6_1": "Census data of Germany, ",
-    "index_right_table6_2": "Census data of the city of Munich for socio-demographic data"
+    "index_right_table6_2": "Census data of the city of Munich for socio-demographic data",
+
+    "privacy": "Privacy",
+    "gtc": "GTC"
     
 }
