@@ -60,14 +60,12 @@ var selector_values_before_sp_0 = [
         "desc": "desc_ji_v_sg",
     },
         {
-        "value": "sg_dialog",
+        "value": "sg",
         "desc": "desc_sg",
-        "variant": true
     },
     {
-        "value": "ji_dialog",
+        "value": "ji",
         "desc": "desc_ji",
-        "variant": true
     },
     /*
     {

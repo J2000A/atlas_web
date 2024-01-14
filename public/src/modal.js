@@ -48,7 +48,7 @@ function createCatSelection (name) {
 
         for (let v of values_dict) {
             let option = document.createElement("button");
-            if (v["variant"] != undefined && v["variant"])
+            if (v["value"] == "sg" || v["value"] == "ji")
                 option.setAttribute("class", "cat-selection-option-variant");
             else
                 option.setAttribute("class", "cat-selection-option");
@@ -56,7 +56,10 @@ function createCatSelection (name) {
 
             let option_text = document.createElement("div");
             option_text.setAttribute("class", "cat-selection-option-text");
-            option_text.setAttribute("i18n", v["value"]);
+            if (v["value"] == "sg" || v["value"] == "ji")
+                option_text.setAttribute("i18n", v["value"] + "_dialog");
+            else
+                option_text.setAttribute("i18n", v["value"]);
             option.appendChild(option_text);
 
             let option_desc = document.createElement("div");
