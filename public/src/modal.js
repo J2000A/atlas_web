@@ -240,3 +240,8 @@ window.onclick = function(event) {
         modal_about.style.display = "none";
     }
 }
+
+document.getElementById("start_dialog_button").addEventListener("click", function(event) {
+    event.preventDefault();
+    displayModal(true);
+});
