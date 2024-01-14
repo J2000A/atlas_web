@@ -671,3 +671,16 @@ a:hover {
 a:visited {
     color: black;
 }
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #072140;
+    -webkit-text-fill-color: #ffffff;
+    text-align: center;
+    border-radius: 10px;
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

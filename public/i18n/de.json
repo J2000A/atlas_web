@@ -10,6 +10,7 @@
     "about_us": "Über",
     "share": "Teilen",
     "landing_page": "Startseite",
+    "start_dialog": "Dialog Starten",
 
     "welcome": "Willkommen beim TUM Mobilitäts(un)gerechtigkeitsatlas!",
     "project_description": "Wo kommt es in München zu Mobilitäts(un)gerechtigkeiten?",
@@ -17,7 +18,7 @@
 
     "data_source": "Datenquellen: Erreichbarkeit aus OpenStreetMap POIs und Straßennetz, Deutsches nationales GTFS. Verhalten und Verfügbarkeit aus Nationaler Mobilitätserhebung MiD 2017, OpenStreetMap. Belastung durch Verkehrsunfälle aus Unfallatlas, Lärm aus Umweltatlas, Umweltverschmutzung vom Lehrstuhl für Verkehrsverhalten an der TUM Soziodemographie der Landeshauptstadt München (2018-2021) und Volkszählung 2011",
 
-    "select_justice": "Kategorie",
+    "select_justice": "Mobilitäts Kategorie",
     "environmental_justice": "Umweltgerechtigkeit",
     "exp": "Umweltrisiken",
     "distribution_justice": "Verteilungsgerechtigkeit",
@@ -28,18 +29,20 @@
 
     "select": "----------",
     "select_map_type": "Kartentyp",
-    "sg": "Bevölkerungsgruppen",
+    "sg": "Nur Bevölkerungsgruppen",
     "desc_sg": "In welchen Gebieten leben welche sozial benachteiligten Bevölkerungsgruppen?",
-    "ji": "Mobilitätsüberblick",
+    "ji": "Nur Mobilitätsüberblick",
     "desc_ji": "Wo bestehen Transportnachteile?",
     "ji_v_sg": "Mobilitäts(un)gerechtigkeit",
-    "desc_ji_v_sg": "Wo überlagern sich soziale Nachteile und Verkehrsnachteilen?",
+    "desc_ji_v_sg": "Wo überlagern sich soziale Nachteile und Verkehrsnachteile?",
     "diff_sg": "Begünstigte vs. benachteiligte Gruppen",
     "desc_diff_sg": "Wie groß ist die Kluft zwischen begünstigten und benachteiligten Gruppen?",
     "feedback": "Bürgermeinungen",
     "desc_feedback": "Bürgermeinungen gesammelt durch die JustFairMobility App",
     "stops": "Haltestellen (Klicken um Namen anzuzeigen)",
     "rails": "Schienennetz",
+    "tram": "Straßenbahn",
+    "subway": "U-Bahn",
     "summ": "Zusammenfassung der Stadtteile",
     "desc_summ": "Wie gerecht ist die Mobilität in meinem Bezirksteil?",
 

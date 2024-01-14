@@ -55,19 +55,20 @@ function valueInSelect(name, value) {
 
 // Starting values
 var selector_values_before_sp_0 = [
-    {
+    /*{
         "value": "sg",
         "desc": "desc_sg"
     },
     {
         "value": "ji",
         "desc": "desc_ji"
-    },
+    },*/
     {
         "value": "ji_v_sg",
         "desc": "desc_ji_v_sg"
     },
-    /*{
+    /*
+    {
         "value": "diff_sg",
         "desc": "desc_diff_sg"
     },*/

@@ -10,6 +10,7 @@
     "about_us": "About",
     "share": "Share",
     "landing_page": "Landing Page",
+    "start_dialog": "Open Dialog",
 
     "welcome": "Welcome to the Mobility (In)justice Atlas",
     "project_description": "Where do mobility (in)justices occur in Munich?",
@@ -17,7 +18,7 @@
 
     "data_source": "Data sources: Accessibility from OpenStreetMap POIs and road network, German national GTFS. Behaviour and Availability from National Mobility survey MiD 2017, OpenStreetMap. Exposure to road accidents from Unfallatlas, to noise from Umweltatlas, Pollution from Chair of Transport Behaviour at TUM. Sociodemographics from City of Munich (2018-2021) and National Census 2011",
 
-    "select_justice": "Category",
+    "select_justice": "Mobility Category",
     "environmental_justice": "Environmental Justice",
     "exp": "Environmental risks",
     "distribution_justice": "Distribution Justice",
@@ -28,9 +29,9 @@
     
     "select": "----------",
     "select_map_type": "Map type",
-    "sg": "Social groups",
+    "sg": "Only Social Groups",
     "desc_sg": "Where do social disadvantaged groups live?",
-    "ji": "Mobility overview",
+    "ji": "Only Mobility Overview",
     "desc_ji": "Where are transport disadvantages?",
     "ji_v_sg": "Mobily (in)justice",
     "desc_ji_v_sg": "Where do social disadvantages cross transport disadvantages?",
@@ -39,6 +40,8 @@
     "feedback": "Citizen feedback",
     "desc_feedback": "Citizen feedback collected with the JustFairMobility app",
     "stops": "Stops (Klick to show names)",
+    "tram": "Tram",
+    "subway": "Subway",
     "rails": "Rail Network",
     "summ": "Neighbourhoods summary",
     "desc_summ": "How just is mobility in my neighborhood?",

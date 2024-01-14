@@ -43,6 +43,14 @@
 				<div class="arrow"></div>
 				<div class="select-options" id="map_type">
 					<div class="select-option">
+						<input type="radio" name="map_type" id="ji_v_sg" value="ji_v_sg">
+						<label for="ji_v_sg" i18n="ji_v_sg"></label>
+						<div class="select-title-info">
+							&#x1F6C8;
+							<span class="info-tooltip" i18n="desc_ji_v_sg"></span>
+						</div>
+					</div>
+					<div class="select-option" style="margin-left: 15px">
 						<input type="radio" name="map_type" id="sg" value="sg">
 						<label for="sg" i18n="sg"></label>
 						<div class="select-title-info">
@@ -50,20 +58,12 @@
 							<span class="info-tooltip" i18n="desc_sg"></span>
 						</div>
 					</div>
-					<div class="select-option">
+					<div class="select-option" style="margin-left: 15px">
 						<input type="radio" name="map_type" id="ji" value="ji">
 						<label for="ji" i18n="ji"></label>
 						<div class="select-title-info">
 							&#x1F6C8;
 							<span class="info-tooltip" i18n="desc_ji"></span>
-						</div>
-					</div>
-					<div class="select-option">
-						<input type="radio" name="map_type" id="ji_v_sg" value="ji_v_sg">
-						<label for="ji_v_sg" i18n="ji_v_sg"></label>
-						<div class="select-title-info">
-							&#x1F6C8;
-							<span class="info-tooltip" i18n="desc_ji_v_sg"></span>
 						</div>
 					</div>
 					<!--<div class="select-option">
@@ -119,6 +119,9 @@
 				<div class="arrow"></div>
 				<div class="select-options" id="v1">
 				</div>
+			</div>
+			<div>
+				<a href="#" id="start_dialog_button" class="button" i18n="start_dialog"></a>
 			</div>
 		</div>
 		<div class="navbar-top-elements">
@@ -181,5 +184,11 @@
 <script src="src/areas.js"></script>
 <script src="src/modal.js"></script>
 <script src="src/url.js"></script>
+<script>
+	document.getElementById("start_dialog_button").addEventListener("click", function(event) {
+		event.preventDefault();
+		displayModal(true);
+	});
+</script>
 </body>
 </html>

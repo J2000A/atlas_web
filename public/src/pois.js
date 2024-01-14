@@ -97,11 +97,11 @@ function handleRailsPOIs(data) {
     }).addTo(map);
 
     var legend_text = '<h4><span i18n="rails"></span></h4>' +
-        '<svg width="150" height="20">' +
+        '<svg width="200" height="20">' +
         '    <line x1="5" y1="10" x2="25" y2="10" stroke="#9e25c5" stroke-width="3" />' +
-        '    <text x="30" y="14" fill="#9e25c5">Tram</text>' +
-        '    <line x1="70" y1="10" x2="90" y2="10" stroke="#2273d0" stroke-width="3" />' +
-        '    <text x="95" y="14" fill="#2273d0">Subway</text>' +
+        '    <text x="30" y="14" fill="#9e25c5" i18n="tram"></text>' +
+        '    <line x1="125" y1="10" x2="145" y2="10" stroke="#2273d0" stroke-width="3" />' +
+        '    <text x="150" y="14" fill="#2273d0" i18n="subway"></text>' +
         '</svg>';
     generateLegend(legend_text, false);
 
