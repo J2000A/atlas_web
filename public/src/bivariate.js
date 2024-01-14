@@ -112,8 +112,9 @@ function handleJsonBiv(data) {
     } else if (selected_values["justice"] == "beh") { // TODO that these elements also show up in the layerControl
         if (poiLayer) { layerControlOptions["POIs"] = poiLayer; }
     }
-    if (busCircleLayer) layerControlOptions["Bus Stops"] = busCircleLayer;
-    if (busAreaLayer) layerControlOptions["Bus Stops Distance"] = busAreaLayer;
+    if (stopsCircleLayer) layerControlOptions["Stops"] = stopsCircleLayer;
+    if (stopsAreaLayer) layerControlOptions["Stops Distance"] = stopsAreaLayer;
+    if (railLayer) layerControlOptions["Rails"] = railLayer;
     layerControl = L.control.layers(null, layerControlOptions).addTo(map);
 
     // Reorder layers
@@ -124,8 +125,9 @@ function handleJsonBiv(data) {
         }
     }
 
-    if (busAreaLayer) busAreaLayer.bringToFront();
-    if (busCircleLayer) busCircleLayer.bringToFront();
+    if (railLayer) railLayer.bringToFront();
+    if (stopsAreaLayer) stopsAreaLayer.bringToFront();
+    if (stopsCircleLayer) stopsCircleLayer.bringToFront();
 
     translatePage();
 }

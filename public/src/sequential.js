@@ -66,10 +66,12 @@ function handleJsonSeq(data) {
     }).addTo(map);
     map.fitBounds(polygonLayer.getBounds());
 
-    if (busAreaLayer)
-        busAreaLayer.bringToFront();
-    if (busCircleLayer)
-        busCircleLayer.bringToFront();
+    if (railLayer)
+        railLayer.bringToFront();
+    if (stopsAreaLayer)
+        stopsAreaLayer.bringToFront();
+    if (stopsCircleLayer)
+        stopsCircleLayer.bringToFront();
 
     translatePage();
 }

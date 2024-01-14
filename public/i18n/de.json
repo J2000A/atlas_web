@@ -37,7 +37,8 @@
     "desc_diff_sg": "Wie groß ist die Kluft zwischen begünstigten und benachteiligten Gruppen?",
     "feedback": "Bürgermeinungen",
     "desc_feedback": "Bürgermeinungen gesammelt durch die JustFairMobility App",
-    "bus_stops": "Bushaltestellen (Klicken um Namen anzuzeigen)",
+    "stops": "Haltestellen (Klicken um Namen anzuzeigen)",
+    "rails": "Schienennetz",
     "summ": "Zusammenfassung der Stadtteile",
     "desc_summ": "Wie gerecht ist die Mobilität in meinem Bezirksteil?",
 

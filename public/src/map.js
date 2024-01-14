@@ -28,8 +28,9 @@ const mot = document.querySelector('#mot');
 // Map layers
 var polygonLayer;
 var poiLayer;
-var busCircleLayer;
-var busAreaLayer;
+var stopsCircleLayer;
+var stopsAreaLayer;
+var railLayer;
 var feedbackLayer;
 var areaLayer;
 var layerControl;
@@ -69,13 +70,16 @@ function changeMap() {
     if (feedbackLayer) {
         feedbackLayer.remove();
     }
-    if (busAreaLayer) {
-        busAreaLayer.remove();
+    if (stopsAreaLayer) {
+        stopsAreaLayer.remove();
         if (layerControl)
             layerControl.remove();
     }
-    if (busCircleLayer) {
-        busCircleLayer.remove();
+    if (stopsCircleLayer) {
+        stopsCircleLayer.remove();
+    }
+    if (railLayer) {
+        railLayer.remove();
     }
 
     generateLegend("", true);
@@ -162,7 +166,11 @@ function changeMap() {
                     if (selected_values["v1"] == "acc_pt") {
                         callLocalGeoRepo(
                             'geodata/filtered_stops.geojson',
-                            handleBusstopPOIs
+                            handleStopPOIs
+                        );
+                        callLocalGeoRepo(
+                            'geodata/filtered_rails.geojson',
+                            handleRailsPOIs
                         );
                     }
                 } else {
@@ -175,7 +183,11 @@ function changeMap() {
                     if (selected_values["amenity"] == "acc_pt") {
                         callLocalGeoRepo(
                             'geodata/filtered_stops.geojson',
-                            handleBusstopPOIs
+                            handleStopPOIs
+                        );
+                        callLocalGeoRepo(
+                            'geodata/filtered_rails.geojson',
+                            handleRailsPOIs
                         );
                     }
                 }
@@ -191,7 +203,11 @@ function changeMap() {
                     if (selected_values["v1"] == "pt_usage") {
                         callLocalGeoRepo(
                             'geodata/filtered_stops.geojson',
-                            handleBusstopPOIs
+                            handleStopPOIs
+                        );
+                        callLocalGeoRepo(
+                            'geodata/filtered_rails.geojson',
+                            handleRailsPOIs
                         );
                     }
                 } else {
@@ -204,7 +220,11 @@ function changeMap() {
                     if (selected_values["amenity"] == "pt_usage") {
                         callLocalGeoRepo(
                             'geodata/filtered_stops.geojson',
-                            handleBusstopPOIs
+                            handleStopPOIs
+                        );
+                        callLocalGeoRepo(
+                            'geodata/filtered_rails.geojson',
+                            handleRailsPOIs
                         );
                     }
                 }
