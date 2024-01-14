@@ -69,14 +69,6 @@ function handleStopPOIs(data) {
         '    </svg>';
     generateLegend(legend_text, false);
 
-    if (selected_values["map_type"] == "ji") {
-        // Add layer control to map
-        var layerControlOptions = {};
-        layerControlOptions["Stops"] = stopCircleStyle;
-        layerControlOptions["Stops Distance"] = stopsAreaLayer;
-        layerControl = L.control.layers(null, layerControlOptions).addTo(map)
-    }
-
     translatePage();
 }
 
@@ -113,12 +105,7 @@ function handleRailsPOIs(data) {
         '</svg>';
     generateLegend(legend_text, false);
 
-    if (selected_values["map_type"] == "ji") {
-        // Add layer control to map
-        var layerControlOptions = {};
-        layerControlOptions["Rail Stops"] = railStyle;
-        layerControl = L.control.layers(null, layerControlOptions).addTo(map)
-    }
+    handleRailStopsLegend();
 
     translatePage();
 }
@@ -179,7 +166,28 @@ function handleFeedback(data) {
     var legend_text = '<h4><span i18n="feedback"></span></h4>';
     generateLegend(legend_text, false);
 
+    handleRailStopsLegend();
+
     translatePage();
+}
+
+function handleRailStopsLegend() {
+    if (selected_values["map_type"] == "ji") {
+        if (layerControl)
+            layerControl.remove();
+        // Add layer control to map
+        var layerControlOptions = {};
+        if (tiles) {
+            layerControlOptions["Background"] = tiles;
+        }
+        if (polygonLayer) {
+            layerControlOptions["Indicator"] = polygonLayer;
+        }
+        if (stopsCircleLayer) layerControlOptions["Stops"] = stopsCircleLayer;
+        if (stopAreaStyle) layerControlOptions["Stops Distance"] = stopsAreaLayer;
+        if (railLayer) layerControlOptions["Rail Stops"] = railLayer;
+        layerControl = L.control.layers(null, layerControlOptions).addTo(map)
+    }
 }
 
 

@@ -66,6 +66,8 @@ function handleJsonSeq(data) {
     }).addTo(map);
     map.fitBounds(polygonLayer.getBounds());
 
+    handleRailStopsLegend();
+
     if (railLayer)
         railLayer.bringToFront();
     if (stopsAreaLayer)

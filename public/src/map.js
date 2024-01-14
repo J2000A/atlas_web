@@ -72,8 +72,6 @@ function changeMap() {
     }
     if (stopsAreaLayer) {
         stopsAreaLayer.remove();
-        if (layerControl)
-            layerControl.remove();
     }
     if (stopsCircleLayer) {
         stopsCircleLayer.remove();
@@ -81,6 +79,8 @@ function changeMap() {
     if (railLayer) {
         railLayer.remove();
     }
+    if (layerControl)
+        layerControl.remove();
 
     generateLegend("", true);
 
@@ -172,6 +172,7 @@ function changeMap() {
                             'geodata/filtered_rails.geojson',
                             handleRailsPOIs
                         );
+                        handleRailStopsLegend();
                     }
                 } else {
                     callGeoServer(
@@ -209,6 +210,7 @@ function changeMap() {
                             'geodata/filtered_rails.geojson',
                             handleRailsPOIs
                         );
+                        handleRailStopsLegend();
                     }
                 } else {
                     callGeoServer(
