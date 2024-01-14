@@ -71,6 +71,8 @@ function changeMap() {
     }
     if (busAreaLayer) {
         busAreaLayer.remove();
+        if (layerControl)
+            layerControl.remove();
     }
     if (busCircleLayer) {
         busCircleLayer.remove();
@@ -170,6 +172,12 @@ function changeMap() {
                         { "user": selected_values["v1"], "type": selected_values["amenity"] },
                         handleJsonBiv
                     );
+                    if (selected_values["amenity"] == "acc_pt") {
+                        callLocalGeoRepo(
+                            'geodata/filtered_stops.geojson',
+                            handleBusstopPOIs
+                        );
+                    }
                 }
                 break;
             case "beh":
@@ -193,6 +201,12 @@ function changeMap() {
                         { "user": selected_values["v1"], "type": selected_values["amenity"] },
                         handleJsonBiv
                     );
+                    if (selected_values["amenity"] == "pt_usage") {
+                        callLocalGeoRepo(
+                            'geodata/filtered_stops.geojson',
+                            handleBusstopPOIs
+                        );
+                    }
                 }
                 break;
             case "income":

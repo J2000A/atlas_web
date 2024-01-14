@@ -46,7 +46,7 @@ function getLegendIFromCircleStyle(style) {
     return '<i class="circle" style="background: ' + style.fillColor + percToHex(style.fillOpacity) + '; border: ' + style.weight + 'px solid ' + style.color + percToHex(style.opacity) + '; width:' + size + 'px; height:' + size + 'px;" ></i>';
 }
 
-function handleBusstopPOIs(data) {
+function handleBusstopPOIs(data, addLayerControl) {
     console.log("Handle Bus Stops")
     busCircleLayer = L.geoJson(data, {
         attribution: '&copy; <a href="https://geodaten.bayern.de/opengeodata/" style="color: #0078A8" i18n="opendata"></a>',
@@ -61,7 +61,7 @@ function handleBusstopPOIs(data) {
     busAreaLayer = L.geoJson(data, {
         style: busAreaStyle,
         pointToLayer: function (feature, latlng) {
-            return L.circle(latlng, { radius: 300, interactive: false });
+            return L.circle(latlng, {radius: 300, interactive: false});
         }
     }).addTo(map);
 
@@ -70,11 +70,13 @@ function handleBusstopPOIs(data) {
         '    </svg>';
     generateLegend(legend_text, false);
 
-    // Add layer control to map
-    var layerControlOptions = {};
-    layerControlOptions["Bus Stops"] = busCircleLayer;
-    layerControlOptions["Bus Stops Distance"] = busAreaLayer;
-    layerControl = L.control.layers(null, layerControlOptions).addTo(map)
+    if (selected_values["map_type"] == "ji") {
+        // Add layer control to map
+        var layerControlOptions = {};
+        layerControlOptions["Bus Stops"] = busCircleLayer;
+        layerControlOptions["Bus Stops Distance"] = busAreaLayer;
+        layerControl = L.control.layers(null, layerControlOptions).addTo(map)
+    }
 
     translatePage();
 }
