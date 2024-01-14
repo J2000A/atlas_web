@@ -48,7 +48,10 @@ function createCatSelection (name) {
 
         for (let v of values_dict) {
             let option = document.createElement("button");
-            option.setAttribute("class", "cat-selection-option");
+            if (v["variant"] != undefined && v["variant"])
+                option.setAttribute("class", "cat-selection-option-variant");
+            else
+                option.setAttribute("class", "cat-selection-option");
             option.setAttribute("value", v["value"]);
 
             let option_text = document.createElement("div");

@@ -55,30 +55,33 @@ function valueInSelect(name, value) {
 
 // Starting values
 var selector_values_before_sp_0 = [
-    /*{
-        "value": "sg",
-        "desc": "desc_sg"
-    },
-    {
-        "value": "ji",
-        "desc": "desc_ji"
-    },*/
     {
         "value": "ji_v_sg",
-        "desc": "desc_ji_v_sg"
+        "desc": "desc_ji_v_sg",
+    },
+        {
+        "value": "sg_dialog",
+        "desc": "desc_sg",
+        "variant": true
+    },
+    {
+        "value": "ji_dialog",
+        "desc": "desc_ji",
+        "variant": true
     },
     /*
     {
         "value": "diff_sg",
-        "desc": "desc_diff_sg"
+        "desc": "desc_diff_sg",
+        "color": "red"
     },*/
     {
         "value": "feedback",
-        "desc": "desc_feedback"
+        "desc": "desc_feedback",
     },
     {
         "value": "summ",
-        "desc": "desc_summ"
+        "desc": "desc_summ",
     }
 ]
 
