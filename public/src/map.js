@@ -28,6 +28,8 @@ const mot = document.querySelector('#mot');
 // Map layers
 var polygonLayer;
 var poiLayer;
+var busCircleLayer;
+var busAreaLayer;
 var feedbackLayer;
 var areaLayer;
 var layerControl;
@@ -66,6 +68,12 @@ function changeMap() {
     }
     if (feedbackLayer) {
         feedbackLayer.remove();
+    }
+    if (busAreaLayer) {
+        busAreaLayer.remove();
+    }
+    if (busCircleLayer) {
+        busCircleLayer.remove();
     }
 
     generateLegend("", true);
@@ -149,6 +157,12 @@ function changeMap() {
                         { "type": selected_values["v1"] },
                         handleJsonSeq
                     );
+                    if (selected_values["v1"] == "acc_pt") {
+                        callLocalGeoRepo(
+                            'geodata/filtered_stops.geojson',
+                            handleBusstopPOIs
+                        );
+                    }
                 } else {
                     callGeoServer(
                         9,
@@ -166,11 +180,12 @@ function changeMap() {
                         { "type": selected_values["v1"] },
                         handleJsonSeq
                     );
-                    // add element to map that is the geojson locally
-                    callLocalGeoRepo(
-                        'geodata/filtered_stops.geojson', 
-                        handleBusstopPOIs
-                    );
+                    if (selected_values["v1"] == "pt_usage") {
+                        callLocalGeoRepo(
+                            'geodata/filtered_stops.geojson',
+                            handleBusstopPOIs
+                        );
+                    }
                 } else {
                     callGeoServer(
                         11,

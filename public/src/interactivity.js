@@ -16,6 +16,8 @@ function highlightFeature(e) {
     layer.bringToFront();
     if (areaLayer) { areaLayer.bringToFront(); }
     if (poiLayer) { poiLayer.bringToFront(); }
+    if (busAreaLayer) { busAreaLayer.bringToFront(); }
+    if (busCircleLayer) { busCircleLayer.bringToFront(); }
     info.update(layer.feature.properties);
 }
 

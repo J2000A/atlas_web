@@ -37,8 +37,10 @@
     "desc_diff_sg": "How big is the gap between advantaged and disadvantaged groups?",
     "feedback": "Citizen feedback",
     "desc_feedback": "Citizen feedback collected with the JustFairMobility app",
+    "bus_stops": "Bus Stops (Klick to show names)",
     "summ": "Neighbourhoods summary",
     "desc_summ": "How just is mobility in my neighborhood?",
+    "opendata": "OpenData",
 
     "avg_munich": "Average of Munich",
     "radar_norm": "This plot shows the different characteristics of the neighborhood in comparison with other neighborhoods in Munich, where 0 means that the neighborhood has the most disadvantaged characterisitcs in the city and 1 means that the neighborhood has the most advantaged characteristics in the city.",

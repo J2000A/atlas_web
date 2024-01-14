@@ -66,25 +66,10 @@ function handleJsonSeq(data) {
     }).addTo(map);
     map.fitBounds(polygonLayer.getBounds());
 
-    /* // Add layer control to map
-    var layerControlOptions = {};
-    if (tiles) { layerControlOptions["Background"] = tiles; }
-    if (polygonLayer) { layerControlOptions["Indicator"] = polygonLayer; }
-    if (selected_values["justice"] == "acc") {
-        if (poiLayer) { layerControlOptions["POIs"] = poiLayer; }
-        if (areaLayer) { layerControlOptions["Service Areas"] = areaLayer; }
-    } else if (selected_values["justice"] == "beh") { // TODO that these elements also show up in the layerControl
-        if (poiLayer) { layerControlOptions["POIs"] = poiLayer; }
-        if (areaLayer) { layerControlOptions["Service Areas"] = areaLayer; }
-    }
-    layerControl = L.control.layers(null, layerControlOptions).addTo(map)
-
-    if (areaLayer) {
-        areaLayer.bringToFront();
-        if (poiLayer) {
-            poiLayer.bringToFront();
-        }
-    } */
+    if (busAreaLayer)
+        busAreaLayer.bringToFront();
+    if (busCircleLayer)
+        busCircleLayer.bringToFront();
 
     translatePage();
 }
