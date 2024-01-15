@@ -163,7 +163,9 @@ function handleFeedback(data) {
         }
     }).addTo(map);
 
-    var legend_text = '<h4><span i18n="feedback"></span></h4>';
+    var legend_text = '<h4><span i18n="feedback"></span></h4><svg width="20" height="20">\n' +
+        '        <circle cx="10" cy="10" r="7" fill="#2a61d2" stroke="#000000" stroke-width="0.5" opacity="1" />\n' +
+        '    </svg>';
     generateLegend(legend_text, false);
 
     handleRailStopsLegend();
