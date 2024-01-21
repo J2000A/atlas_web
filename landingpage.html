@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Just Fair Mobility</title>
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.tum.de/typo3conf/ext/in2template/Resources/Public/Images/Icons/favicons/favicon.ico" />
+    <link rel="stylesheet" href="index.css">
+
+    <!-- i18n -->
+    <script src="https://cdn.jsdelivr.net/npm/i18next@22.4.10/i18next.min.js" integrity="sha256-HhbcQm9uCk1XKzYb8wgO1aAW+Wcdh14ITlBggCy7lDk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/i18next-http-backend@2.1.1/i18nextHttpBackend.min.js" integrity="sha256-PEd69ii7lMPlO/bO8tpxaVjLXXkD+r9aejg8nFAcue4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/i18next-browser-languagedetector@7.0.1/i18nextBrowserLanguageDetector.min.js" integrity="sha256-5O8laLCvkg/QnkOa0yIzvZ7RcJgT4nSG6/gdbudcTGg=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="home_header">
+        <div class="navbar-container">
+            <div class="navbar-top-elements">
+                <div style="display: flex; align-items: center;">
+                    <a style="margin-right: 20px;" class="logo" title="Technische Universität München" href="https://www.mos.ed.tum.de/sv/startseite/">
+                        <svg width="80" height="42" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 73 38">
+                            <path d="M28 0v31h8V0h37v38h-7V7h-8v31h-7V7h-8v31H21V7h-7v31H7V7H0V0h28z" fill="white"></path>
+                        </svg>
+                        <span class="visually-hidden">TUM</span>
+                        <!-- <span class="desktop-show" i18n="header"></span> -->
+                    </a>
+                    <img style="height: 42px; margin-right: 20px" src="img/mcube-logo.svg" alt="MCube Cluster">
+                    <img style="height: 42px;" src="img/jfm_logo.png" alt="JustFairMobility">
+                </div>
+                <div class="title"><h1 i18n="title"></h1></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main">
+        <div id="left-column">
+        </div>
+
+        <div id="main-column">
+
+            <div class="text-box">
+                <h3>Customer Need</h3>
+                <p>The decision process for new mobility projects is very complex and currently there exists no suitable support tool which helps politics & municipalities and practitioners for an overview about mobility injustice.</p>
+                <p>Our solution addresses all bottlenecks and at the same time: JustFairMobility is understandable, transparent and user-friendly and enables citizens to participate at the mobility planning process. </p>
+            </div>
+
+            <div class="text-box">
+                <h3>Value Proposition</h3>
+                <p>JFM seamlessly bridges web and app interfaces, uncovering comprehensive and user-friendly data to eliminate bottlenecks and enable informed, sustainable, and long-term oriented decisions.</p>
+                <ol>
+                    <li>Quantify mobility injustice data
+                        <ul>
+                            <li>Data put into context</li>
+                            <li>Added Points of Interest (e.g., bus stops)</li>
+                        </ul>
+                    </li>
+                    <li>Explore critical areas by leveraging qualitative data
+                        <ul>
+                            <li>Explore critical areas by leveraging qualitative data</li>
+                            <li>JFM app fosters citizen participation</li>
+                            <li>Municipalities get direct feedback from citizens</li>
+                        </ul>
+                    </li>
+                    <li>Make injustice visible
+                        <ul>
+                            <li>Combination of qualitative and quantitative data</li>
+                            <li>Great UI and UX in web and mobile app</li>
+                        </ul>
+                    </li>
+                    <li>Take conclusive action
+                        <ul>
+                            <li>Identify real pain points as decision support</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="text-box">
+                <h3>Prototype</h3>
+                <p>Our prototype is composed out of two parts. The <a href="https://play.google.com/store/apps/details?id=de.jonasaugust.justfairmobilityapp">JustFairMobility mobile Android app</a> that allow citizens to report problems and the <a href="https://just-fair-mobility.web.app">JustFairMobility Atlas web app</a> for politicians and municipalities. The Firebase backend connects the mobile app with the web app.</p>
+            </div>
+
+            <div class="text-box">
+                <h3>Differentiation</h3>
+                <p>Currently, there is no solution that provides aggregated and interpretable mobility data at scale. If a critical number of users is reached, monetization and a freemium concept for use of JFM are planned. This enables the transfer of politicians, municipalities, and practitioners from users to clients. An urgent go-to-market strategy and investments in scalable software solutions are imperative to sustainable growth and venture success.</p>
+            </div>
+
+            <div class="text-box with-button">
+                <a href="atlas.html" class="button">Start Web App</a>
+            </div>
+
+            <a href="privacy.html" i18n="privacy"></a>
+            <a href="terms.html" i18n="terms"></a>
+
+        </div>
+    
+        <div id="right-column">
+        </div>
+    </div>
+
+<script src="src/i18n.js"></script>
+</body>
+
+</html>
