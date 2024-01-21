@@ -1,0 +1,16 @@
+{
+  "name": "just-fair-mobility",
+  "version": "1.0.0",
+  "description": "Simulate a web server using Node.js",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
